@@ -61,22 +61,9 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span id="sidebar_text">Sidebar</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
-            </nav>
-
             <!-- Header -->
             <header class="w3-display-container w3-content w3-wide" style="max-height:1600px;min-height:500px;max-width:1600px;min-height:500px" id="home">
-                <img class="w3-image" src="theatre.jpg" alt="Theatre Image" width="1600" height="800">
+                <img class="w3-image" src="theatre.jpg" alt="Theatre Image">
                 <div class="w3-display-bottomleft w3-padding-large w3-opacity">
                     <h1 class="w3-xxlarge" style="color:white">H1 Theatre Forum</h1>
                 </div>
@@ -147,24 +134,18 @@
                     <p>Phone: +1 (234) 567 - 8910 <br>
                         Email: rui@allen.com <br>
                         or you can send us a message here:</p>
-                    <form action="/action_page.php" target="_blank">
+                    <form>
                         <p><input class="w3-input w3-padding-16" type="text" placeholder="Request Title" required name="Request Title"></p>
                         <p><input class="w3-input w3-padding-16" type="text" placeholder="Request Author" required name="Request Author"></p>
                         <p><input class="w3-input w3-padding-16" type="text" placeholder="Your email: example@example.com" required name="Your Email"></p>
                         <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required
                                 name="Message"></p>
-                        <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+                        <p><button id="messageSend" class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
                     </form>
                 </div>
             
                 <!-- End page content -->
             </div>
-            
-            <!-- Footer -->
-            <footer class="w3-center w3-light-grey w3-padding-32">
-                <p>Powered by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="CaoFu Technologies" target="_blank"
-                        class="w3-hover-text-green">CaoFu Technologies</a></p>
-            </footer>
 
 
         </div>
@@ -190,6 +171,10 @@
         $("#commentButton").click(function(){
             $("#comments_row").append("<div class='col-sm-2 text-center'> <img src='https://img.icons8.com/pastel-glyph/64/000000/person-male.png'></div><div class='col-sm-10'><h4>" + localStorage.getItem("fname") +"<small>  " + currentDate.toString() +"</small></h4><br><p>" + document.getElementById("comment").value + "</p></div><br>");
             console.log("hi")
+        });
+
+        $('#messageSend').on('click', function () {
+            window.alert("Message Sent");
         });
 
     });
