@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="entrance-form">
+                <h2><b>Welcome to H1 Theatre Forum</b></h2>
+            <br>
+            <br>
+                <h4>What is your name?</h4>
+            <br>
+            <div class="input-group">
+                <input id="name_input" type="text" class="form-control" required>
+            </div>
+            <br>
+            <a href="index.html" class="btn btn-primary" onclick="entrance()" role="button">Enter</a>
+            </div>
+          </div>
+    </div>
+</body>
+
+<style>
+    html,
+    body {
+        padding:50px;
+    }
+
+    .jumbotron{
+        background: url('https://i.ya-webdesign.com/images/theater-vector-theatre-background-6.png') no-repeat center center;
+        padding: 5em inherit;
+    }
+
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entrance-form{
+        text-align: center;
+    }
+</style>
+
+</html>
+
+<script>
+    function entrance() {
+        var name = document.getElementById("name_input").value;
+        localStorage.setItem('fname', name)
+    }
+</script>

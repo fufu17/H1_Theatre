@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Navigation Side Bar -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 id="title">H1 Theatre</h3>
+                <hr id="line_break">
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li class = "active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#playsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Plays</a>
+                    <ul class="collapse list-unstyled" id="playsSubmenu">
+                        <li>
+                            <a href="domestictension.html">Domestic Tension</a>
+                        </li>
+                        <li>
+                          <a href="chinoiserie.html">Chinoiserie</a>
+                        </li>
+                        <li>
+                          <a href="genericplay.html">Another Play</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span id="sidebar_text">Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </nav>
+
+            
+            <div class="content_container">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>I Love Food</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+                <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <br><br>
+                
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>Officially Blogging</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+                <h5><span class="label label-success">Lorem</span></h5><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+        
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                    <textarea id="comment" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button id="commentButton" type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <br><br>
+                
+                <p><span class="badge">2</span> Comments:</p><br>
+                
+                <div id="comments_row">
+                    <div class="col-sm-2 text-center">
+                    <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+                        <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life.</p>
+                        <br>
+                        <p><span class="badge">1</span> Comment:</p><br>
+                        <div class="nested_row">
+                            <div class="col-sm-2 text-center">
+                            <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" class="img-circle" height="65" width="65" alt="Avatar">
+                            </div>
+                            <div class="col-xs-10">
+                            <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                            <p>Me too! WOW!</p>
+                            <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2 text-center">
+                        <img src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-sm-10">
+                        <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+                        <p>Keep up the GREAT work! I am cheering for you!!</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="container-fluid">
+    <p>H1 Productions</p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+        var currentDate = new Date()
+        var comments = []
+
+        $("#commentButton").click(function(){
+            $("#comments_row").append("<div class='col-sm-2 text-center'> <img src='https://img.icons8.com/pastel-glyph/64/000000/person-male.png'></div><div class='col-sm-10'><h4>" + localStorage.getItem("fname") +"<small>  " + currentDate.toString() +"</small></h4><br><p>" + document.getElementById("comment").value + "</p></div><br>");
+            console.log("hi")
+        });
+
+    });
+</script>
